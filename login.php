@@ -57,96 +57,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="icon" href="img/novo-isotipo.png" type="logo-site">
+    <link rel="stylesheet" href="login.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        .login {
-            background-color: #9160be;
-            color: white;
-            border-radius: 10px;
-            padding: 0 9px;
-        }
-
-        body {
-            font-family: "Kanit", sans-serif;
-            background-color: #f4f4f4;
-            padding: 100px 20px 20px 20px;
-            color: #333;
-        }
-
-        h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .login-container {
-            max-width: 400px;
-            margin: 50px auto;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        form {
-            margin-top: 20px;
-        }
-
-        .form-group {
-            margin-bottom: 15px;
-            text-align: left;
-        }
-
-        form input {
-            width: 100%;
-            padding: 10px;
-            margin-top: 5px;
-            border-radius: 5px;
-            border: 1px solid #ddd;
-        }
-
-        .btn-login {
-            width: 100%;
-            padding: 10px;
-            background-color: blueviolet;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .btn-login:hover {
-            background-color: #9160be;
-        }
-
-        .btn-register {
-            color: blueviolet;
-            font-weight: bold;
-            text-decoration: none;
-        }
-
-        .btn-register:hover {
-            opacity: 0.7;
-        }
-
-        .btn-voltar {
-            color: blueviolet;
-            font-weight: bold;
-            text-decoration: none;
-        }
-
-        .btn-voltar:hover {
-            opacity: 0.7;
-        }
-    </style>
 </head>
+
 <body>
     <div class="login-container">
         <h2>Login</h2>

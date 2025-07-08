@@ -1,0 +1,200 @@
+    @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Kanit", sans-serif;
+    background-color: #f4f4f4;
+    padding: 100px 20px 20px 20px; 
+    color: #333;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.sair{
+    color: rgb(201, 30, 30);
+} 
+nav a:hover.sair{
+    color: red;
+}
+
+nav a {
+    margin-right: 15px;
+    padding-left: 20px;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: "Kanit", sans-serif;
+    color: black;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    opacity: 0.7;
+    font-size: 23px;
+}
+
+nav a:active {
+    opacity: 0.5;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: #f4f4f4;
+    z-index: 20;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.carrossel {
+    position: relative;
+    width: 1320px;
+    height: 500px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.carrossel .slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: calc(1320px * 2); /* 3 imagens */
+}
+
+.carrossel img {
+    width: 1500px;
+    height: 500px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.carrossel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 28px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+}
+
+.carrossel .btn-anterior {
+    left: 15px;
+}
+
+.carrossel .btn-proximo {
+    right: 15px;
+}
+
+.detalhe{
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: rgb(176, 81, 231);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.detalhe:hover {
+    background-color: rgb(150, 35, 216);
+}
+
+
+button {
+    width: 90px;
+    height: 40px;
+    border-radius: 14px;
+    background-color: blueviolet;
+    margin-left: 20px;
+    font-size: 18px;
+    color: white;
+    font-family: "Kanit", sans-serif;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    width: 95px;
+    height: 45px;
+}
+
+h2 {
+    text-align: center;
+    padding-top: 150px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 10px;
+}
+
+.produto {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.produto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.produto img {
+    width: 100%;
+    border-radius: 10px;
+    height: auto;
+    object-fit: cover;
+}
+
+.produto h3 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.preco {
+    font-size: 16px;
+    color: #27ae60;
+    font-weight: bold;
+}
+
+.botao {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: blueviolet;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.botao:hover {
+    background-color: #9160be;
+}

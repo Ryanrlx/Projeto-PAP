@@ -3,81 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Detalhes do Artigo</title>
+    <link rel="stylesheet" href="detalhes_artigo.css">
     <link rel="icon" href="img/novo-isotipo.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Kanit', sans-serif;
-            background-color: #f4f4f4;
-            padding: 40px 20px;
-            color: #333;
-        }
-
-        h1 {
-            text-align: center;
-            color: #4b0082;
-            margin-bottom: 30px;
-        }
-
-        form {
-            max-width: 500px;
-            margin: auto;
-            background: white;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-            color: #4b0082;
-        }
-
-        input[type="text"] {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            margin-top: 10px;
-            margin-bottom: 20px;
-        }
-
-        a {
-            display: inline-block;
-            margin-top: 20px;
-            text-decoration: none;
-            background-color: #4b0082;
-            color: white;
-            padding: 10px 15px;
-            border-radius: 5px;
-            font-weight: bold;
-            text-align: center;
-        }
-
-        a:hover {
-            background-color: #6a1bb5;
-        }
-
-        .text-danger {
-            color: red;
-            text-align: center;
-            margin-top: 20px;
-        }
-    </style>
 </head>
 <body>
     <h1>Detalhes do Artigo</h1>

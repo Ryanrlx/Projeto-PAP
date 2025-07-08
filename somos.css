@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap');
+
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: "Kanit", sans-serif;
+    background: linear-gradient(135deg, #c4c4c4, #dfdfdf, #c4c4c4);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    flex: 1;
+}
+
+.main-content {
+    padding: 100px 20px 20px 20px;
+    flex: 1;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.sair {
+    color: rgb(201, 30, 30);
+}
+
+nav a:hover.sair {
+    color: red;
+}
+
+nav a {
+    margin-right: 15px;
+    padding-left: 20px;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: "Kanit", sans-serif;
+    color: black;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    opacity: 0.7;
+    font-size: 23px;
+}
+
+nav a:active {
+    opacity: 0.5;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: #f4f4f4;
+    z-index: 3;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+h2 {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 10px;
+}
+
+.produto {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 100px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.produto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+.produto h3 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+footer {
+    text-align: center;
+    color: #888;
+}
