@@ -126,7 +126,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['codartigo'], $_POST['
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Listagem de Artigos</title>
+    <title>Basic Prints</title>
     <link rel="icon" href="img/novo-isotipo.png" type="logo-site">
      <link rel="stylesheet" href="compras.css">
     <!-- Bootstrap CSS -->
@@ -141,14 +141,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['codartigo'], $_POST['
             <a href="logout.php" class="sair">Sair</a>
         </nav>
     </header>
-<div class="caixa carrossel">
-    <button class="btn-anterior"></button>
-    <div class="slides">
-        <img class="img" src="img/carrossel.jpg" alt="Slide 1">
-        <img class="img2" src="img/carrossel2.jpg" alt="Slide 2">
+    <div class="carrossel">
+        <button class="btn-anterior"><</button>
+
+        <div class="slides">
+            <img src="img/carrossel.jpg" alt="Imagem 1">
+            <img src="img/carrossel2.jpg" alt="Imagem 2">
+        </div>
+
+        <button class="btn-proximo">></button>
     </div>
-    <button class="btn-proximo"></button>
-</div>
 
 <main>
         <h2>Lançamentos</h2>
@@ -224,23 +226,28 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['codartigo'], $_POST['
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-                const slides = document.querySelector('.carrossel .slides');
-    const imagens = slides.querySelectorAll('img');
-    let index = 0;
+        const slides = document.querySelector('.carrossel .slides');
+        const imagens = slides.querySelectorAll('img');
+        let index = 0;
 
-    document.querySelector('.btn-proximo').addEventListener('click', () => {
-        index = (index + 1) % imagens.length;
-        atualizarSlide();
-    });
+        document.querySelector('.btn-proximo').addEventListener('click', () => {
+            index = (index + 1) % imagens.length;
+            atualizarSlide();
+        });
 
-    document.querySelector('.btn-anterior').addEventListener('click', () => {
-        index = (index - 1 + imagens.length) % imagens.length;
-        atualizarSlide();
-    });
+        document.querySelector('.btn-anterior').addEventListener('click', () => {
+            index = (index - 1 + imagens.length) % imagens.length;
+            atualizarSlide();
+        });
 
-    function atualizarSlide() {
-        slides.style.transform = `translateX(-${index * 1500}px)`;
-    }
+        function atualizarSlide() {
+            const larguraImagem = slides.getBoundingClientRect().width;
+            slides.style.transform = `translateX(-${index * larguraImagem}px)`;
+        }
+
+        // Atualiza a posição correta ao redimensionar a janela
+        window.addEventListener('resize', atualizarSlide);
+
         // Passar o código do artigo para o modal
         var modalAddToCart = document.getElementById('modalAddToCart');
         modalAddToCart.addEventListener('show.bs.modal', function (event) {

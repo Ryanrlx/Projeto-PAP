@@ -57,49 +57,43 @@ header {
 }
 
 .carrossel {
-    position: relative;
-    width: 1320px;
-    height: 500px;
-    margin: 20px auto;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  width: 100%;
+  overflow: hidden;
 }
 
-.carrossel .slides {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    width: calc(1320px * 2); /* 3 imagens */
+.slides {
+  display: flex;
+  transition: transform 0.5s ease;
 }
 
-.carrossel img {
-    width: 1500px;
-    height: 500px;
-    object-fit: cover;
-    flex-shrink: 0;
+.slides img {
+  width: 100%;
+  flex-shrink: 0;
 }
 
 .carrossel button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 12px;
-    font-size: 28px;
-    cursor: pointer;
-    z-index: 10;
-    border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1;  /* garantir que ficam por cima */
 }
 
-.carrossel .btn-anterior {
-    left: 15px;
+.btn-anterior {
+  left: 10px;
 }
 
-.carrossel .btn-proximo {
-    right: 15px;
+.btn-proximo {
+  right: 10px;
 }
+
+
 
 .detalhe{
     display: inline-block;

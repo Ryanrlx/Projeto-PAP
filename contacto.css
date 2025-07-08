@@ -1,0 +1,104 @@
+    @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: "Kanit", sans-serif;
+        background-color: #f4f4f4;
+        padding: 100px 20px 20px 20px;
+        color: #333;
+    }
+
+    nav {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .sair {
+        color: rgb(201, 30, 30);
+    }
+
+    nav a:hover.sair {
+        color: red;
+    }
+
+    nav a {
+        margin-right: 15px;
+        padding-left: 20px;
+        text-decoration: none;
+        font-size: 20px;
+        font-family: "Kanit", sans-serif;
+        color: black;
+        transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+        opacity: 0.7;
+        font-size: 23px;
+    }
+
+    nav a:active {
+        opacity: 0.5;
+    }
+
+    header {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        padding: 20px;
+        background-color: #f4f4f4;
+        z-index: 20;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    button {
+        width: 90px;
+        height: 40px;
+        border-radius: 14px;
+        background-color: blueviolet;
+        font-size: 18px;
+        color: white;
+        font-family: "Kanit", sans-serif;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    button:hover {
+        width: 95px;
+        height: 45px;
+    }
+
+    h2 {
+        text-align: center;
+        padding-top: 150px;
+    }
+
+    .form-contato {
+        max-width: 600px;
+        margin: 50px auto;
+        background-color: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-contato label {
+        font-weight: bold;
+    }
+
+    .form-contato button {
+        width: 100%;
+    }
+
+    footer {
+        margin-top: 60px;
+        text-align: center;
+        color: #888;
+    }

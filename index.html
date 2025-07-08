@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <title>Basic Prints</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <header>
@@ -16,14 +18,17 @@
             <a href="login.php">Login</a>
         </nav>
     </header>
-<div class="caixa carrossel">
-    <button class="btn-anterior"></button>
-    <div class="slides">
-        <img class="img" src="img/carrossel.jpg" alt="Slide 1">
-        <img class="img2" src="img/carrossel2.jpg" alt="Slide 2">
+    <div class="carrossel">
+        <button class="btn-anterior"><</button>
+
+        <div class="slides">
+            <img src="img/carrossel.jpg" alt="Imagem 1">
+            <img src="img/carrossel2.jpg" alt="Imagem 2">
+        </div>
+
+        <button class="btn-proximo">></button>
     </div>
-    <button class="btn-proximo"></button>
-</div>
+
 
     <main>
         <h2>Lançamentos</h2>
@@ -41,7 +46,7 @@
                 <img src="./img/camisa-CR7.jpg" alt="estampa-cr7">
                 <h3>Camisa Cristiano Ronaldo</h3>
                 <p class="preco">€99,99</p>
-                 <a href="login.php" class="botao">Comprar</a>
+                <a href="login.php" class="botao">Comprar</a>
                 <a href="login.php" class="detalhe">Detalhe</a>
             </div>
 
@@ -103,26 +108,33 @@
 
         </div>
     </main>
-    
-<script>
+
+    <script>
         const slides = document.querySelector('.carrossel .slides');
-    const imagens = slides.querySelectorAll('img');
-    let index = 0;
+        const imagens = slides.querySelectorAll('img');
+        let index = 0;
 
-    document.querySelector('.btn-proximo').addEventListener('click', () => {
-        index = (index + 1) % imagens.length;
-        atualizarSlide();
-    });
+        document.querySelector('.btn-proximo').addEventListener('click', () => {
+            index = (index + 1) % imagens.length;
+            atualizarSlide();
+        });
 
-    document.querySelector('.btn-anterior').addEventListener('click', () => {
-        index = (index - 1 + imagens.length) % imagens.length;
-        atualizarSlide();
-    });
+        document.querySelector('.btn-anterior').addEventListener('click', () => {
+            index = (index - 1 + imagens.length) % imagens.length;
+            atualizarSlide();
+        });
 
-    function atualizarSlide() {
-        slides.style.transform = `translateX(-${index * 1500}px)`;
-    }
-</script>
+        function atualizarSlide() {
+            const larguraImagem = slides.getBoundingClientRect().width;
+            slides.style.transform = `translateX(-${index * larguraImagem}px)`;
+        }
+
+        // Atualiza a posição correta ao redimensionar a janela
+        window.addEventListener('resize', atualizarSlide);
+    </script>
+
+
 
 </body>
+
 </html>
